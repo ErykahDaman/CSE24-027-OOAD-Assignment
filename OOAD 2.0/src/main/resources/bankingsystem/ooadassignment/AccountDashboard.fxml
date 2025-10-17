@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bankingsystem.ooadassignment.AccountDashboardController"
+            prefWidth="600" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom right, #4B0092, #663399);">
+
+    <children>
+        <Label text="Account Dashboard"
+               layoutX="180" layoutY="30"
+               style="-fx-font-size: 26px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+        <Button text="View Accounts" layoutX="200" layoutY="100" prefWidth="200" onAction="#viewAccounts"
+                style="-fx-background-color:white; -fx-text-fill:#301934; -fx-font-weight:bold;"/>
+        <Button text="Deposit" layoutX="200" layoutY="160" prefWidth="200" onAction="#deposit"
+                style="-fx-background-color:white; -fx-text-fill:#301934; -fx-font-weight:bold;"/>
+        <Button text="Withdraw" layoutX="200" layoutY="220" prefWidth="200" onAction="#withdraw"
+                style="-fx-background-color:white; -fx-text-fill:#301934; -fx-font-weight:bold;"/>
+        <Button text="Transfer" layoutX="200" layoutY="280" prefWidth="200" onAction="#transfer"
+                style="-fx-background-color:white; -fx-text-fill:#301934; -fx-font-weight:bold;"/>
+        <Button text="Logout" layoutX="200" layoutY="340" prefWidth="200" onAction="#logout"
+                style="-fx-background-color:white; -fx-text-fill:#301934; -fx-font-weight:bold;"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400" prefWidth="600" style="-fx-background-color: linear-gradient(to bottom right, #4B0082, #663399);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankingsystem.ooadassignment.MainMenuController">
+
+    <!-- Page Title -->
+    <children>
+        <Label layoutX="180" layoutY="50" style="-fx-font-size: 28px; -fx-text-fill: white; -fx-font-weight: bold;" text="BANKING SYSTEM" />
+
+        <!-- Buttons -->
+        <Button fx:id="registerBtn" layoutX="200" layoutY="150" onAction="#openRegistration" prefWidth="200" style="-fx-background-color: white; -fx-text-fill: #301934; -fx-font-weight: bold;" text="Register Customer" />
+
+        <Button fx:id="loginBtn" layoutX="200" layoutY="210" onAction="#openLogin" prefWidth="200" style="-fx-background-color: white; -fx-text-fill: #301934; -fx-font-weight: bold;" text="Login" />
+
+        <Button fx:id="exitBtn" layoutX="200" layoutY="270" onAction="#exitApp" prefWidth="200" style="-fx-background-color: white; -fx-text-fill: #301934; -fx-font-weight: bold;" text="Exit" />
+    </children>
+</AnchorPane>
