@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bankingsystem.ooadassignment.SavingsPageController"
+            prefWidth="600" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom right, #4B0082, #663399);">
+
+    <children>
+        <Label text="Savings Account"
+               layoutX="180" layoutY="30"
+               style="-fx-font-size: 26px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+        <!-- Account Info Section -->
+        <Label text="Account Number:" layoutX="100" layoutY="120" style="-fx-text-fill:white;"/>
+        <Label fx:id="accountNumberLabel" layoutX="280" layoutY="120" style="-fx-text-fill:white;"/>
+
+        <Label text="Account Holder:" layoutX="100" layoutY="160" style="-fx-text-fill:white;"/>
+        <Label fx:id="accountHolderLabel" layoutX="280" layoutY="160" style="-fx-text-fill:white;"/>
+
+        <Label text="Balance (P):" layoutX="100" layoutY="200" style="-fx-text-fill:white;"/>
+        <Label fx:id="balanceLabel" layoutX="280" layoutY="200" style="-fx-text-fill:white;"/>
+
+        <!-- Deposit Section -->
+        <Label text="Deposit Amount:" layoutX="100" layoutY="270" style="-fx-text-fill:white;"/>
+        <TextField fx:id="depositField" layoutX="280" layoutY="265" prefWidth="150"/>
+        <Button text="Deposit" layoutX="450" layoutY="265" onAction="#handleDeposit"
+                style="-fx-background-color:white; -fx-text-fill:#301934; -fx-font-weight:bold;"/>
+
+        <!-- Withdraw Section -->
+        <Label text="Withdraw Amount:" layoutX="100" layoutY="320" style="-fx-text-fill:white;"/>
+        <TextField fx:id="withdrawField" layoutX="280" layoutY="315" prefWidth="150"/>
+        <Button text="Withdraw" layoutX="450" layoutY="315" onAction="#handleWithdraw"
+                style="-fx-background-color:white; -fx-text-fill:#301934; -fx-font-weight:bold;"/>
+
+        <!-- Back Button -->
+        <Button text="Back" layoutX="240" layoutY="400" prefWidth="120" onAction="#backToDashboard"
+                style="-fx-background-color:white; -fx-text-fill:#301934; -fx-font-weight:bold;"/>
+    </children>
+</AnchorPane>

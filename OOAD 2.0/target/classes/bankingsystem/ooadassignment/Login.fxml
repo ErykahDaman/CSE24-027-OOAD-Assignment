@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bankingsystem.ooadassignment.LoginController"
+            prefWidth="400" prefHeight="300"
+            style="-fx-background-color: linear-gradient(to bottom right, #4B0082, #663399);">
+
+    <Label text="LOGIN" layoutX="160" layoutY="30"
+           style="-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+    <Label text="ID:" layoutX="50" layoutY="80" style="-fx-text-fill: white;"/>
+    <TextField fx:id="idField" layoutX="120" layoutY="75" prefWidth="200"/>
+
+    <Label text="Password:" layoutX="50" layoutY="130" style="-fx-text-fill: white;"/>
+    <TextField fx:id="passwordField" layoutX="120" layoutY="125" prefWidth="200"/>
+
+    <Button text="Login" layoutX="120" layoutY="180" prefWidth="100"
+            onAction="#loginCustomer"
+            style="-fx-background-color: white; -fx-text-fill: #301934; -fx-font-weight: bold;"/>
+
+    <Button text="Back" layoutX="230" layoutY="180" prefWidth="90"
+            onAction="#backToMain"
+            style="-fx-background-color: white; -fx-text-fill: #301934; -fx-font-weight: bold;"/>
+</AnchorPane>
