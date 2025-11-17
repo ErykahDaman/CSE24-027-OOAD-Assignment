@@ -1,13 +1,17 @@
 package bankingsystem.bankscenarioassignment;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.File;
 
 public class CustomerRegistrationController {
 
@@ -18,54 +22,49 @@ public class CustomerRegistrationController {
     @FXML private PasswordField txtPassword;
     @FXML private Button btnSave;
 
-    // Path to customer file
-    private final String CUSTOMER_FILE = "src/main/resources/bankingsystem/bankscenarioassignment/customer.txt";
-
     @FXML
-    private void saveCustomer(ActionEvent event) {
-        String id = txtID.getText().trim();
-        String firstName = txtFirstName.getText().trim();
-        String surname = txtSurname.getText().trim();
-        String email = txtEmail.getText().trim();
-        String password = txtPassword.getText().trim();
+    private void registerCustomer(ActionEvent event) {
+        saveToFile();
+    }
 
-        if (id.isEmpty() || firstName.isEmpty() || surname.isEmpty() || email.isEmpty() || password.isEmpty()) {
-            showAlert("Error", "Please fill in all fields.");
+    private void saveToFile() {
+        String first = txtFirstName.getText();
+        String last = txtSurname.getText();
+        String id = txtID.getText();
+        String email = txtEmail.getText();
+        String pass = txtPassword.getText();
+
+        if (first.isEmpty() || last.isEmpty() || id.isEmpty() || email.isEmpty() || pass.isEmpty()) {
+            showAlert("Error", "All fields must be filled!");
             return;
         }
 
-        // Optional: Add simple ID format check
-        if (!id.matches("C\\d{3}")) {
-            showAlert("Error", "Customer ID must be in format C001, C002, etc.");
-            return;
-        }
+        String customerData = id + "," + first + "," + last + "," + email + "," + pass;
 
-        // Build the line to save
-        String newCustomerLine = id + "," + firstName + "," + surname + "," + password + "," + "UnknownAddress" + "," + "UnknownPhone" + "," + email;
-
-        try {
-            File file = new File(CUSTOMER_FILE);
-            file.getParentFile().mkdirs(); // Ensure folder exists
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) { // append mode
-                writer.write(newCustomerLine);
-                writer.newLine();
-            }
-
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("customers.txt", true))) {
+            writer.write(customerData);
+            writer.newLine();
             showAlert("Success", "Customer registered successfully!");
 
-            // Clear the form
-            txtID.clear();
+            // Clear fields
             txtFirstName.clear();
             txtSurname.clear();
+            txtID.clear();
             txtEmail.clear();
             txtPassword.clear();
 
         } catch (IOException e) {
+            showAlert("File Error", "Could not save customer.");
             e.printStackTrace();
-            showAlert("Error", "Failed to save customer.");
         }
     }
-
+    @FXML
+    private void backToMainMenu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/bankingsystem/ooadassignment/MainMenu.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
