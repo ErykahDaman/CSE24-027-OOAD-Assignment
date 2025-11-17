@@ -1,7 +1,0 @@
-TellerID,FirstName,Surname,Password
-
-T001,Katsuki,Bakugo,kacchan123
-T002,Izuku,Midoriya,deku123
-T003,Shoto,Todoroki,shoto123
-T004,Ochaco,Uraraka,ochaco123
-T005,Tenya,Iida,tenya123

@@ -1,7 +1,0 @@
-CustomerID,FirstName,Surname,Password,Address,Phone,Email
-
-C001,Jimin,Park,jimin123,123 Main St,725000001,parkjimin@gmail.com
-C002,Jungkook,Jeon,jk123,456 Main St,725000002,jeonjungkook@gmail.com
-C003,Taehyung,Kim,v123,789 Main St,725000003,kimtaehyung@gmail.com
-C004,Hoseok,Jung,hoseok123,101 Main St,725000004,junghoseok@gmail.com
-C005,Seokjin,Kim,kimseokjin,202 Main St,725000005,kimseokjin@gmail.com
