@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bankingsystem.bankscenarioassignment.CustomerRegistrationController"
+            prefWidth="600" prefHeight="450"
+            style="-fx-background-color: linear-gradient(to bottom right, #4B0082, #663399);">
+
+    <!-- Page Title -->
+    <Label text="Register Customer" layoutX="220" layoutY="20"
+           style="-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+    <!-- Labels and TextFields -->
+    <Label text="Customer ID:" layoutX="50" layoutY="70" style="-fx-text-fill: white;"/>
+    <TextField fx:id="idField" layoutX="200" layoutY="70" prefWidth="300"/>
+
+    <Label text="First Name:" layoutX="50" layoutY="110" style="-fx-text-fill: white;"/>
+    <TextField fx:id="nameField" layoutX="200" layoutY="110" prefWidth="300"/>
+
+    <Label text="Surname:" layoutX="50" layoutY="150" style="-fx-text-fill: white;"/>
+    <TextField fx:id="surnameField" layoutX="200" layoutY="150" prefWidth="300"/>
+
+    <Label text="Password:" layoutX="50" layoutY="190" style="-fx-text-fill: white;"/>
+    <TextField fx:id="passwordField" layoutX="200" layoutY="190" prefWidth="300"/>
+
+    <Label text="Address:" layoutX="50" layoutY="230" style="-fx-text-fill: white;"/>
+    <TextField fx:id="addressField" layoutX="200" layoutY="230" prefWidth="300"/>
+
+    <Label text="Phone:" layoutX="50" layoutY="270" style="-fx-text-fill: white;"/>
+    <TextField fx:id="phoneField" layoutX="200" layoutY="270" prefWidth="300"/>
+
+    <Label text="Email:" layoutX="50" layoutY="310" style="-fx-text-fill: white;"/>
+    <TextField fx:id="emailField" layoutX="200" layoutY="310" prefWidth="300"/>
+
+    <!-- Buttons -->
+    <Button text="Register" layoutX="200" layoutY="360" prefWidth="120" onAction="#registerCustomer"/>
+    <Button text="Back to Main Menu" layoutX="330" layoutY="360" prefWidth="170" onAction="#backToMainMenu"/>
+</AnchorPane>

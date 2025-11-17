@@ -1,0 +1,4 @@
+tellerID,firstname,lastname,password
+T001,Alice,Johnson,alice123
+T002,Mark,Williams,mark456
+T003,Susan,Lee,susan789
