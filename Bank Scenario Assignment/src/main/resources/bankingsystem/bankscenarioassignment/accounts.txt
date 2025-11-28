@@ -1,5 +1,0 @@
-accountNumber,customerID,type,balance,branch
-A1001,C001,Savings,5000,Main
-A1002,C001,Cheque,2000,Main
-A1003,C002,Savings,3000,Central
-A1004,C003,Cheque,1500,East

@@ -1,4 +1,0 @@
-customerID,firstname,surname,password,address,phone,email
-C001,John,Doe,password123,12 Main St,0712345678,john@example.com
-C002,Jane,Smith,pass456,34 Elm Ave,0723456789,jane@example.com
-C003,Bob,Brown,mysecret,56 Oak Rd,0734567890,bob@example.com
