@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="500" prefWidth="750"
+            style="-fx-background-color: linear-gradient(to bottom right, #3f047e, #3CB371);"
+            xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17"
+            fx:controller="bankingsystem.ooadassignment.tellerdashboardcontroller">
+
+    <!-- Title Section -->
+    <VBox layoutX="20" layoutY="20" spacing="10">
+        <Label text="Teller Dashboard"
+               style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
+        <Label fx:id="welcomeLabel"
+               style="-fx-text-fill: white; -fx-font-size: 18px;"
+               text="Welcome, Teller!" />
+    </VBox>
+
+    <!-- Customer List Section -->
+    <VBox layoutX="20" layoutY="120" spacing="10" prefWidth="450">
+        <Label text="Customer List"
+               style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <ListView fx:id="customerListView"
+                  prefHeight="320"
+                  prefWidth="450"
+                  style="-fx-background-color: white; -fx-background-radius: 5px;" />
+    </VBox>
+
+    <!-- Action Buttons Section -->
+    <VBox layoutX="500" layoutY="120" spacing="15" prefWidth="220">
+        <Label text="Actions"
+               style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <Button onAction="#addCustomer"
+                prefWidth="220"
+                prefHeight="50"
+                text="Add Customer"
+                style="-fx-background-color: #f604f1; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5px; -fx-cursor: hand;">
+            <effect>
+                <javafx.scene.effect.DropShadow color="#00000050" radius="5" offsetY="2"/>
+            </effect>
+        </Button>
+
+        <!-- REMOVED VIEW ACCOUNTS BUTTON -->
+
+        <Button onAction="#deleteCustomer"
+                prefWidth="220"
+                prefHeight="50"
+                text="Delete Customer"
+                style="-fx-background-color: #6a02ff; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5px; -fx-cursor: hand;">
+            <effect>
+                <javafx.scene.effect.DropShadow color="#00000050" radius="5" offsetY="2"/>
+            </effect>
+        </Button>
+
+        <Separator style="-fx-background-color: white;" />
+
+        <Button onAction="#logout"
+                prefWidth="220"
+                prefHeight="50"
+                text="Logout"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5px; -fx-cursor: hand;">
+            <effect>
+                <javafx.scene.effect.DropShadow color="#00000050" radius="5" offsetY="2"/>
+            </effect>
+        </Button>
+    </VBox>
+
+    <!-- Footer Info -->
+    <Label layoutX="20" layoutY="470"
+           text="Select a customer from the list to perform actions"
+           style="-fx-text-fill: white; -fx-font-size: 12px; -fx-font-style: italic;" />
+
+</AnchorPane>

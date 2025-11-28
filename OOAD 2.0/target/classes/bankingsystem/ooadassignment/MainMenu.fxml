@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bankingsystem.ooadassignment.MainMenuController"
+            prefWidth="700" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460);">
+
+    <!-- Decorative Background Elements -->
+    <Region layoutX="-50" layoutY="-50" prefWidth="300" prefHeight="300"
+            style="-fx-background-color: radial-gradient(center 50% 50%, radius 80%, rgba(123,44,191,0.3), transparent);"
+            opacity="0.6"/>
+
+    <Region layoutX="450" layoutY="250" prefWidth="300" prefHeight="300"
+            style="-fx-background-color: radial-gradient(center 50% 50%, radius 80%, rgba(157,78,221,0.3), transparent);"
+            opacity="0.6"/>
+
+    <!-- Main Content Container -->
+    <VBox layoutX="125" layoutY="60" spacing="35" alignment="TOP_CENTER"
+          style="-fx-background-color: rgba(255,255,255,0.08);
+                 -fx-background-radius: 25;
+                 -fx-border-color: rgba(255,255,255,0.2);
+                 -fx-border-radius: 25;
+                 -fx-border-width: 1.5;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 25, 0, 0, 8);"
+          prefWidth="450" prefHeight="380">
+        <padding><Insets top="40" right="50" bottom="40" left="50"/></padding>
+
+        <!-- Logo/Icon and Title -->
+        <VBox spacing="10" alignment="CENTER">
+            <HBox alignment="CENTER" spacing="15">
+                <Label text="🏦" style="-fx-font-size: 48px;"/>
+            </HBox>
+
+            <Label text="BANKING SYSTEM"
+                   style="-fx-font-size: 36px;
+                          -fx-text-fill: white;
+                          -fx-font-weight: bold;
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 8, 0, 0, 3);"/>
+
+            <Label text="Secure • Reliable • Modern"
+                   style="-fx-font-size: 14px;
+                          -fx-text-fill: rgba(255,255,255,0.7);
+                          -fx-font-style: italic;"/>
+        </VBox>
+
+        <!-- Separator -->
+        <Separator prefWidth="350"
+                   style="-fx-background-color: rgba(255,255,255,0.2);">
+            <VBox.margin><Insets top="-5" bottom="-5"/></VBox.margin>
+        </Separator>
+
+        <!-- Menu Buttons -->
+        <VBox spacing="18" alignment="CENTER">
+            <VBox.margin><Insets top="5"/></VBox.margin>
+
+            <!-- Register Button -->
+            <Button fx:id="registerBtn"
+                    text="📝 Register Customer"
+                    onAction="#openRegistration"
+                    prefWidth="320" prefHeight="55"
+                    style="-fx-background-color: linear-gradient(to right, #7b2cbf, #9d4edd);
+                           -fx-text-fill: white;
+                           -fx-font-size: 16px;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 15;
+                           -fx-cursor: hand;
+                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 12, 0, 0, 4);"/>
+
+            <!-- Login Button -->
+            <Button fx:id="loginBtn"
+                    text="🔐 Login"
+                    onAction="#openLogin"
+                    prefWidth="320" prefHeight="55"
+                    style="-fx-background-color: linear-gradient(to right, #5a189a, #7209b7);
+                           -fx-text-fill: white;
+                           -fx-font-size: 16px;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 15;
+                           -fx-cursor: hand;
+                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 12, 0, 0, 4);"/>
+
+            <!-- Exit Button -->
+            <Button fx:id="exitBtn"
+                    text="🚪 Exit"
+                    onAction="#exitApp"
+                    prefWidth="320" prefHeight="55"
+                    style="-fx-background-color: rgba(255,255,255,0.12);
+                           -fx-text-fill: white;
+                           -fx-font-size: 16px;
+                           -fx-font-weight: 600;
+                           -fx-background-radius: 15;
+                           -fx-border-color: rgba(255,255,255,0.3);
+                           -fx-border-radius: 15;
+                           -fx-border-width: 2;
+                           -fx-cursor: hand;"/>
+        </VBox>
+    </VBox>
+
+
+
+
+</AnchorPane>

@@ -1,0 +1,8 @@
+customerID,firstname,surname,password,address,phone,email
+
+C001,Jimin,Park,jimin123,Seoul Street 1,0711111111,jimin@example.com
+C002,Jungkook,Jeon,jk123,Busan Road 5,0722222222,jungkook@example.com
+C003,Taehyung,Kim,v123,Daegu Lane 9,0733333333,v@example.com
+C004,Hoseok,Jung,hoseok123,Itaewon Block 3,0744444444,hobi@example.com
+C005,Seokjin,Kim,kimseokjin,Maple Ave 7,0755555555,jin@example.com
+C006,Yoongi,Min,min123,daegu Road 7,0777777780,yoongi@gmail.com

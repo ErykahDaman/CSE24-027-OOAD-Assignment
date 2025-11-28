@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bankingsystem.ooadassignment.CustomerRegistrationController"
+            prefWidth="700" prefHeight="650"
+            style="-fx-background-color: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460);">
+
+    <!-- Decorative Background Elements -->
+    <Region layoutX="-50" layoutY="400" prefWidth="250" prefHeight="250"
+            style="-fx-background-color: radial-gradient(center 50% 50%, radius 80%, rgba(123,44,191,0.25), transparent);"
+            opacity="0.7"/>
+
+    <Region layoutX="500" layoutY="-50" prefWidth="250" prefHeight="250"
+            style="-fx-background-color: radial-gradient(center 50% 50%, radius 80%, rgba(157,78,221,0.25), transparent);"
+            opacity="0.7"/>
+
+    <!-- Main Registration Card -->
+    <VBox layoutX="100" layoutY="40" spacing="25" alignment="TOP_CENTER"
+          style="-fx-background-color: rgba(255,255,255,0.08);
+                 -fx-background-radius: 25;
+                 -fx-border-color: rgba(255,255,255,0.2);
+                 -fx-border-radius: 25;
+                 -fx-border-width: 1.5;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 25, 0, 0, 8);"
+          prefWidth="500" prefHeight="570">
+        <padding><Insets top="35" right="45" bottom="35" left="45"/></padding>
+
+        <!-- Title Section -->
+        <VBox spacing="8" alignment="CENTER">
+            <HBox alignment="CENTER" spacing="12">
+                <Label text="📝" style="-fx-font-size: 36px;"/>
+                <Label text="Create Your Account"
+                       style="-fx-font-size: 30px;
+                              -fx-text-fill: white;
+                              -fx-font-weight: bold;
+                              -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 6, 0, 0, 2);"/>
+            </HBox>
+
+            <Label text="Join our secure banking system today"
+                   style="-fx-font-size: 13px;
+                          -fx-text-fill: rgba(255,255,255,0.7);
+                          -fx-font-style: italic;"/>
+        </VBox>
+
+        <!-- Separator -->
+        <Separator prefWidth="410"
+                   style="-fx-background-color: rgba(255,255,255,0.25);">
+            <VBox.margin><Insets top="-5" bottom="-5"/></VBox.margin>
+        </Separator>
+
+        <!-- Form Fields -->
+        <VBox spacing="16" alignment="CENTER">
+
+            <!-- First Name -->
+            <VBox spacing="6" prefWidth="410">
+                <Label text="First Name"
+                       style="-fx-text-fill: rgba(255,255,255,0.9);
+                              -fx-font-size: 13px;
+                              -fx-font-weight: 600;"/>
+                <HBox spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-background-color: rgba(0,0,0,0.3);
+                             -fx-background-radius: 10;
+                             -fx-border-color: rgba(255,255,255,0.25);
+                             -fx-border-radius: 10;
+                             -fx-border-width: 1;
+                             -fx-padding: 8 12;">
+                    <Label text="👤" style="-fx-font-size: 16px;"/>
+                    <TextField fx:id="nameField"
+                               promptText="Enter your first name"
+                               style="-fx-background-color: transparent;
+                                      -fx-text-fill: white;
+                                      -fx-prompt-text-fill: rgba(255,255,255,0.4);
+                                      -fx-font-size: 14px;"
+                               prefWidth="360"/>
+                </HBox>
+            </VBox>
+
+            <!-- Surname -->
+            <VBox spacing="6" prefWidth="410">
+                <Label text="Surname"
+                       style="-fx-text-fill: rgba(255,255,255,0.9);
+                              -fx-font-size: 13px;
+                              -fx-font-weight: 600;"/>
+                <HBox spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-background-color: rgba(0,0,0,0.3);
+                             -fx-background-radius: 10;
+                             -fx-border-color: rgba(255,255,255,0.25);
+                             -fx-border-radius: 10;
+                             -fx-border-width: 1;
+                             -fx-padding: 8 12;">
+                    <Label text="👥" style="-fx-font-size: 16px;"/>
+                    <TextField fx:id="surnameField"
+                               promptText="Enter your surname"
+                               style="-fx-background-color: transparent;
+                                      -fx-text-fill: white;
+                                      -fx-prompt-text-fill: rgba(255,255,255,0.4);
+                                      -fx-font-size: 14px;"
+                               prefWidth="360"/>
+                </HBox>
+            </VBox>
+
+            <!-- Password -->
+            <VBox spacing="6" prefWidth="410">
+                <Label text="Password"
+                       style="-fx-text-fill: rgba(255,255,255,0.9);
+                              -fx-font-size: 13px;
+                              -fx-font-weight: 600;"/>
+                <HBox spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-background-color: rgba(0,0,0,0.3);
+                             -fx-background-radius: 10;
+                             -fx-border-color: rgba(255,255,255,0.25);
+                             -fx-border-radius: 10;
+                             -fx-border-width: 1;
+                             -fx-padding: 8 12;">
+                    <Label text="🔒" style="-fx-font-size: 16px;"/>
+                    <TextField fx:id="passwordField"
+                               promptText="Create a secure password"
+                               style="-fx-background-color: transparent;
+                                      -fx-text-fill: white;
+                                      -fx-prompt-text-fill: rgba(255,255,255,0.4);
+                                      -fx-font-size: 14px;"
+                               prefWidth="360"/>
+                </HBox>
+            </VBox>
+
+            <!-- Address -->
+            <VBox spacing="6" prefWidth="410">
+                <Label text="Address"
+                       style="-fx-text-fill: rgba(255,255,255,0.9);
+                              -fx-font-size: 13px;
+                              -fx-font-weight: 600;"/>
+                <HBox spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-background-color: rgba(0,0,0,0.3);
+                             -fx-background-radius: 10;
+                             -fx-border-color: rgba(255,255,255,0.25);
+                             -fx-border-radius: 10;
+                             -fx-border-width: 1;
+                             -fx-padding: 8 12;">
+                    <Label text="🏠" style="-fx-font-size: 16px;"/>
+                    <TextField fx:id="addressField"
+                               promptText="Enter your address"
+                               style="-fx-background-color: transparent;
+                                      -fx-text-fill: white;
+                                      -fx-prompt-text-fill: rgba(255,255,255,0.4);
+                                      -fx-font-size: 14px;"
+                               prefWidth="360"/>
+                </HBox>
+            </VBox>
+
+            <!-- Phone -->
+            <VBox spacing="6" prefWidth="410">
+                <Label text="Phone Number"
+                       style="-fx-text-fill: rgba(255,255,255,0.9);
+                              -fx-font-size: 13px;
+                              -fx-font-weight: 600;"/>
+                <HBox spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-background-color: rgba(0,0,0,0.3);
+                             -fx-background-radius: 10;
+                             -fx-border-color: rgba(255,255,255,0.25);
+                             -fx-border-radius: 10;
+                             -fx-border-width: 1;
+                             -fx-padding: 8 12;">
+                    <Label text="📱" style="-fx-font-size: 16px;"/>
+                    <TextField fx:id="phoneField"
+                               promptText="Enter your phone number"
+                               style="-fx-background-color: transparent;
+                                      -fx-text-fill: white;
+                                      -fx-prompt-text-fill: rgba(255,255,255,0.4);
+                                      -fx-font-size: 14px;"
+                               prefWidth="360"/>
+                </HBox>
+            </VBox>
+
+            <!-- Email -->
+            <VBox spacing="6" prefWidth="410">
+                <Label text="Email Address"
+                       style="-fx-text-fill: rgba(255,255,255,0.9);
+                              -fx-font-size: 13px;
+                              -fx-font-weight: 600;"/>
+                <HBox spacing="10" alignment="CENTER_LEFT"
+                      style="-fx-background-color: rgba(0,0,0,0.3);
+                             -fx-background-radius: 10;
+                             -fx-border-color: rgba(255,255,255,0.25);
+                             -fx-border-radius: 10;
+                             -fx-border-width: 1;
+                             -fx-padding: 8 12;">
+                    <Label text="📧" style="-fx-font-size: 16px;"/>
+                    <TextField fx:id="emailField"
+                               promptText="Enter your email address"
+                               style="-fx-background-color: transparent;
+                                      -fx-text-fill: white;
+                                      -fx-prompt-text-fill: rgba(255,255,255,0.4);
+                                      -fx-font-size: 14px;"
+                               prefWidth="360"/>
+                </HBox>
+            </VBox>
+
+        </VBox>
+
+        <!-- Buttons -->
+        <HBox spacing="18" alignment="CENTER">
+            <VBox.margin><Insets top="10"/></VBox.margin>
+
+            <Button text="✅ Register"
+                    onAction="#registerCustomer"
+                    prefWidth="190" prefHeight="50"
+                    style="-fx-background-color: linear-gradient(to right, #06d6a0, #00b894);
+                           -fx-text-fill: white;
+                           -fx-font-size: 16px;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 12;
+                           -fx-cursor: hand;
+                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 12, 0, 0, 4);"/>
+
+            <Button text="← Back"
+                    onAction="#backToMainMenu"
+                    prefWidth="190" prefHeight="50"
+                    style="-fx-background-color: rgba(255,255,255,0.12);
+                           -fx-text-fill: white;
+                           -fx-font-size: 16px;
+                           -fx-font-weight: 600;
+                           -fx-background-radius: 12;
+                           -fx-border-color: rgba(255,255,255,0.3);
+                           -fx-border-radius: 12;
+                           -fx-border-width: 2;
+                           -fx-cursor: hand;"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

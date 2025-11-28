@@ -1,0 +1,4 @@
+AccountNumber,CustomerID,AccountType,Balance,Branch,OpenDate
+ACC001,Jimin,Savings,5000.0,Main,1698739200000
+ACC002,Jimin,AccountType,1500.0,Main,1698739200000
+ACC003,Jimin,AccountType,0.0,Main,1764300157094
